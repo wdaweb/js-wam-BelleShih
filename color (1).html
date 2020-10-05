@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 字體 -->
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            width: 100%;
+        }
+
+        body{
+            font-family: 'Baloo Tammudu 2', cursive;
+            background: #acacac;
+            position:relative;
+        }
+
+        .cube {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            margin: auto;
+            margin-top: 150px;
+            border-radius: 5%;
+            border: 1px solid rgb(255, 255, 255);  
+            background: white; 
+            box-shadow: 0 0 10px 6px rgba(161, 161, 161, 0.5);         
+        }
+
+        table {
+            margin: auto;
+            margin-top: 20px;
+           
+        }
+        
+        table td {
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgb(236, 236, 236);
+            border-radius: 40%;
+            margin: auto;
+            cursor: pointer;
+        }
+
+        #logo {
+            width: 400px;
+            position: relative;
+            left: 7%;
+            top: -400px;
+            filter: drop-shadow(1px 1px 5px rgb(160, 160, 160))
+        }
+
+        #btn-start {
+            width: 200px;
+            height: 50px;
+            position: relative;
+            top: -250px;
+            left: 760px;
+            border: 2px solid rgba(192, 191, 191, 0.123);
+            border-radius: 25px;
+            box-shadow: 0 0 10px 6px rgba(161, 161, 161, 0.5);
+            background:  rgb(0, 0, 0);
+            color: rgb(246, 246, 246);
+            font-size: 20px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            cursor: pointer;
+
+        }
+        #btn-start:hover {
+            background: rgb(253, 192, 23);
+            color: white;
+            text-shadow: 0 0 10px rgb(109, 109, 109);
+            border: 0.5px solid rgb(255, 255, 255);
+            box-shadow: inset 0 0 5px 2px rgba(54, 54, 54, 0.5);
+        }
+
+        #score {
+            position: relative;
+            top: -500px;
+            left: 1340px;
+            font-size: 1rem;            
+        }
+        #text-score {
+            position: absolute;
+            /* top: -500px;
+            left: 1000px; */
+            font-size: 7rem;
+        }
+        #time{
+            position: relative;
+            top: -800px;
+            left: 1340px;
+            font-size: 1rem;
+            color: white; 
+        }
+        #game-time{
+            position: absolute;                       
+            font-size: 6rem;
+            color: white;
+        }
+        #line {
+            width: 200px;
+            height: 3px;
+            background-image:linear-gradient(45deg,  #FFF 50%, #000 50%);
+            position: absolute;
+            top: 300px;
+            left:1320px;
+        }
+
+        #title{
+            color: rgb(255, 219, 143);
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: 4px;
+            position: relative;
+            left: 5%;
+            top: -380px;
+            animation: animation 3s infinite;
+        }
+        #highscore{
+            color: rgb(255, 255, 255);
+            font-size: 1.5rem;
+            letter-spacing: 4px;
+            position: relative;
+            left: 88%;
+            top: -1100px;
+            font-weight: 600;
+            line-height: 35px;
+        }
+        #hsbg{
+            width: 400px;
+            height: 400px;
+            background: rgb(241, 188, 188);
+            border-radius: 50%;
+
+            position: absolute;
+            top: -300px;
+            left: 1430px;
+            animation: animation 10s infinite;
+        }
+        @keyframes animation {
+            0%{
+                filter: hue-rotate(0deg);
+            }
+            100%{
+                filter: hue-rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body> 
+    <div class="cube">
+    <table >
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    </div>
+    <div><img src="./Hawklogo.png" alt="logo" id="logo"></div>
+    <div id="title">Find the different colors！</div>
+<input type="button" value="START" id="btn-start">
+<p id="score">
+    SCORE
+    <span id="text-score">0</span>
+</p>
+<div id="line"></div>
+<p id="time">
+    TIME
+    <span id="game-time">20</span>
+</p>
+<div id="hsbg"></div>
+<p id="highscore">
+    Highscore
+    <br>
+    __________
+    <br>
+       player: <span id="text-highplayer"></span>
+       <br>
+       score: <span id="text-highscore"></span>
+  </p>
+<!-- <script src="./jquery-3.5.1.js"></script> -->
+    <script>
+        const btnStart = document.getElementById('btn-start')
+        const  textScore = document.getElementById('text-score')
+        const gameTimeText = document.getElementById('game-time')
+        const holes = document.getElementsByTagName('td')        
+        
+
+        const textHighPlayer = document.getElementById('text-highplayer')
+        const textHighScore = document.getElementById('text-highscore')
+
+        let score = 0
+        let timer = 0
+
+        let highscore = { name: '', score: 0 }
+        let highscoreStorage = JSON.parse(localStorage.getItem('highscore'))
+        if(highscoreStorage !== null) {
+            highscore = highscoreStorage
+            textHighPlayer.innerText = highscore.name
+            textHighScore.innerText = highscore.score
+        }        
+
+       
+        btnStart.onclick = () => {
+            btnStart.disabled = true
+            score = 0
+            textScore.innerText = score            
+
+            let gameTime = 20
+            gameTimeText.innerText = 20           
+
+            timer = setInterval( () => {
+                gameTime--
+                gameTimeText.innerText = `${gameTime}`
+
+
+                if ( gameTime === 0) {
+                    clearInterval(timer)
+                    btnStart.disabled = false
+
+                    if (score === 1) {
+                        alert(`你的分數是 ${score} 分, 你的眼睛等級跟 倉鼠 一樣喔！`)
+                    }
+                    else if (score === 2) {
+                        alert(`你的分數是 ${score} 分, 你的眼睛等級跟 小型蝙蝠 一樣喔！`)
+                    }
+                    else if (score === 3) {
+                        alert(`你的分數是 ${score} 分, 你的眼睛等級跟 松鼠 一樣喔！`)
+                    }
+                    else if (score === 4) {
+                        alert(`你的分數是 ${score} 分, 你的眼睛等級跟 海豚 一樣喔！`)
+                    }
+                    else if (score === 5) {
+                        alert(`你的分數是 ${score} 分, 你的眼睛等級跟 大象 一樣喔！`)
+                    }
+                    else if (score === 6) {
+                        alert(`你的分數是 ${score} 分, 你的眼睛等級跟 無尾熊 一樣喔！`)
+                    }
+                    else if (score === 7) {
+                        alert(`你的分數是 ${score} 分, 你的眼睛等級跟 貓頭鷹 一樣喔！`)
+                    }
+                    else if (score === 8) {
+                        alert(`你的分數是 ${score} 分, 你的眼睛等級跟 兔子 一樣喔！`)
+                    }
+                    else if (score === 9) {
+                        alert(`你的分數是 ${score} 分, 你的眼睛等級跟 貓 一樣喔！`)
+                    }
+                    else if (score === 10) {
+                        alert(`你的分數是 ${score} 分, 你的眼睛等級跟 狗 一樣喔！`)
+                    }
+                    else if (score === 11) {
+                        alert(`你的分數是 ${score} 分, 你的眼睛等級跟 馬 一樣喔！`)
+                    }
+                    else if (score === 12) {
+                        alert(`你的分數是 ${score} 分, 你的眼睛等級跟 黑猩猩 一樣喔！`)
+                    }
+                    else if (score === 13) {
+                        alert(`你的分數是 ${score} 分, 你的眼睛等級跟 豹 一樣喔！`)
+                    }
+                    else if (score === 14) {
+                        alert(`你的分數是 ${score} 分, 你的眼睛等級跟 長頸鹿 一樣喔！`)
+                    }
+                    else if (score >= 15) {
+                        alert(`你的分數是 ${score} 分, 你的眼睛等級跟 老鷹 一樣喔！`)
+                    }
+                    
+                    
+
+
+
+                    if(highscoreStorage === null || highscore.score < score) {        
+
+                    const name = prompt('恭喜您贏過所有挑戰者！趕快留下您的名字吧！')
+                    highscore.score = score
+                    highscore.name = name || 'passerby'
+
+                    localStorage.setItem('highscore', JSON.stringify(highscore))
+                    textHighPlayer.innerText = highscore.name
+                    textHighScore.innerText = highscore.score
+
+        
+                    
+                    for( const hole of holes) {
+                        hole.style.backgroundColor = `rgb(255, 255, 255)`
+                    }
+                }
+                score = 0
+                gameTime = 20
+                }
+            } ,1000)
+            
+            game()
+            
+
+        }
+
+        const game = () => {
+            
+            const randomR = Math.floor(Math.random()*255)
+            const randomG = Math.floor(Math.random()*255)
+            const randomB = Math.floor(Math.random()*255)
+            const random = Math.floor(Math.random()*100)
+            // const a = `rgb(${randomR+30}, ${randomG+30}, ${randomB+30})` 
+            
+            for(const hole of holes) {                
+                hole.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`                    
+            }                
+                holes[random].style.backgroundColor = `rgb(${randomR + random}, ${randomG + random}, ${randomB + random})`            
+                
+                holes[random].onclick = () => {             
+                    score++
+                    textScore.innerText = score 
+                    
+                    game()            
+            }                                                              
+            } 
+
+        
+    </script>
+    
+</body>
+</html>
