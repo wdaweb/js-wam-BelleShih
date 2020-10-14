@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- 字體 -->
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <title>Document</title>
     <style>
         html,
@@ -12,30 +14,34 @@
             width: 100%;
         }
 
-        body{
+        body {
             font-family: 'Baloo Tammudu 2', cursive;
             background: #acacac;
-            position:relative;
+            position: relative;
+            width: 1280px;
+            height: 768px;
         }
 
         .cube {
             position: relative;
+            left: 37%;
+            transform: translate(-50%);
             width: 500px;
             height: 500px;
             margin: auto;
             margin-top: 150px;
             border-radius: 5%;
-            border: 1px solid rgb(255, 255, 255);  
-            background: white; 
-            box-shadow: 0 0 10px 6px rgba(161, 161, 161, 0.5);         
+            border: 1px solid rgb(255, 255, 255);
+            background: white;
+            box-shadow: 0 0 10px 6px rgba(161, 161, 161, 0.5);
         }
 
         table {
             margin: auto;
             margin-top: 20px;
-           
+
         }
-        
+
         table td {
             width: 40px;
             height: 40px;
@@ -62,7 +68,7 @@
             border: 2px solid rgba(192, 191, 191, 0.123);
             border-radius: 25px;
             box-shadow: 0 0 10px 6px rgba(161, 161, 161, 0.5);
-            background:  rgb(0, 0, 0);
+            background: rgb(0, 0, 0);
             color: rgb(246, 246, 246);
             font-size: 20px;
             font-weight: 700;
@@ -70,6 +76,7 @@
             cursor: pointer;
 
         }
+
         #btn-start:hover {
             background: rgb(253, 192, 23);
             color: white;
@@ -80,38 +87,44 @@
 
         #score {
             position: relative;
-            top: -500px;
-            left: 1340px;
-            font-size: 1rem;            
+            top: -400px;
+            left: 1150px;
+            font-size: 1rem;
+            width: 100px;
         }
+
         #text-score {
             position: absolute;
             /* top: -500px;
             left: 1000px; */
             font-size: 7rem;
         }
-        #time{
+
+        #time {
             position: relative;
-            top: -800px;
-            left: 1340px;
+            top: -600px;
+            left: 1100px;
             font-size: 1rem;
-            color: white; 
+            color: white;
+            width: 100px;
         }
-        #game-time{
-            position: absolute;                       
+
+        #game-time {
+            position: absolute;
             font-size: 6rem;
             color: white;
         }
+
         #line {
             width: 200px;
             height: 3px;
-            background-image:linear-gradient(45deg,  #FFF 50%, #000 50%);
+            background-image: linear-gradient(45deg, #FFF 50%, #000 50%);
             position: absolute;
-            top: 300px;
-            left:1320px;
+            top: 400px;
+            left: 1320px;
         }
 
-        #title{
+        #title {
             color: rgb(255, 219, 143);
             font-size: 2rem;
             font-weight: 800;
@@ -120,192 +133,200 @@
             left: 5%;
             top: -380px;
             animation: animation 3s infinite;
+            pointer-events: none;
+            width: 500px;
         }
-        #highscore{
+
+        #highscore {
             color: rgb(255, 255, 255);
             font-size: 1.5rem;
             letter-spacing: 4px;
             position: relative;
-            left: 88%;
-            top: -1100px;
+            left: 1600px;
+            top: -950px;
             font-weight: 600;
             line-height: 35px;
+            width: 100px;
         }
-        #hsbg{
-            width: 400px;
-            height: 400px;
+
+        #hsbg {
+            width: 300px;
+            height: 350px;
             background: black;
-            border-radius: 50%;
+            /* border-radius: 50%; */
 
             position: absolute;
-            top: -300px;
-            left: 1430px;
+            top: -200px;
+            left: 1550px;
             /* animation: animation 10s infinite; */
         }
+
         @keyframes animation {
-            0%{
+            0% {
                 filter: hue-rotate(0deg);
             }
-            100%{
+
+            100% {
                 filter: hue-rotate(360deg);
             }
         }
     </style>
 </head>
-<body> 
+
+<body>
     <div class="cube">
-    <table >
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </table>
+        <table>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
     </div>
     <div><img src="./Hawklogo.png" alt="logo" id="logo"></div>
     <div id="title">Find the different colors！</div>
-<input type="button" value="START" id="btn-start">
-<p id="score">
-    SCORE
-    <span id="text-score">0</span>
-</p>
-<div id="line"></div>
-<p id="time">
-    TIME
-    <span id="game-time">20</span>
-</p>
-<div id="hsbg"></div>
-<p id="highscore">
-    Highscore
-    <br>
-    __________
-    <br>
-       player: <span id="text-highplayer"></span>
-       <br>
-       score: <span id="text-highscore"></span>
-  </p>
-<!-- <script src="./jquery-3.5.1.js"></script> -->
+    <input type="button" value="START" id="btn-start">
+    <span id="score">
+        SCORE
+        <span id="text-score">0</span>
+    </span>
+    <div id="line"></div>
+    <span id="time">
+        TIME
+        <span id="game-time">20</span>
+    </span>
+    <div id="hsbg"></div>
+    <div id="highscore">
+        Highscore
+        <br>
+        __________
+        <br>
+        player: <span id="text-highplayer"></span>
+        <br>
+        score: <span id="text-highscore"></span>
+    </div>
+    <!-- <script src="./jquery-3.5.1.js"></script> -->
     <script>
         const btnStart = document.getElementById('btn-start')
-        const  textScore = document.getElementById('text-score')
+        const textScore = document.getElementById('text-score')
         const gameTimeText = document.getElementById('game-time')
-        const holes = document.getElementsByTagName('td')        
-        
+        const holes = document.getElementsByTagName('td')
+
 
         const textHighPlayer = document.getElementById('text-highplayer')
         const textHighScore = document.getElementById('text-highscore')
@@ -313,126 +334,112 @@
         let score = 0
         let timer = 0
 
-        let highscore = { name: '', score: 0 }
+        let highscore = {
+            name: '',
+            score: 0
+        }
         let highscoreStorage = JSON.parse(localStorage.getItem('highscore'))
-        if(highscoreStorage !== null) {
+        if (highscoreStorage !== null) {
             highscore = highscoreStorage
             textHighPlayer.innerText = highscore.name
             textHighScore.innerText = highscore.score
-        }        
+        }
 
-       
         btnStart.onclick = () => {
             btnStart.disabled = true
             score = 0
-            textScore.innerText = score            
+            textScore.innerText = score
 
             let gameTime = 20
-            gameTimeText.innerText = 20           
+            gameTimeText.innerText = 20
 
-            timer = setInterval( () => {
+            timer = setInterval(() => {
                 gameTime--
                 gameTimeText.innerText = `${gameTime}`
 
 
-                if ( gameTime === 0) {
+                if (gameTime === 0) {
                     clearInterval(timer)
                     btnStart.disabled = false
-
+                    
                     if (score === 1) {
                         alert(`你的分數是 ${score} 分, 你的眼睛等級跟 倉鼠 一樣喔！`)
-                    }
-                    else if (score === 2) {
+                    } else if (score === 2) {
                         alert(`你的分數是 ${score} 分, 你的眼睛等級跟 小型蝙蝠 一樣喔！`)
-                    }
-                    else if (score === 3) {
+                    } else if (score === 3) {
                         alert(`你的分數是 ${score} 分, 你的眼睛等級跟 松鼠 一樣喔！`)
-                    }
-                    else if (score === 4) {
+                    } else if (score === 4) {
                         alert(`你的分數是 ${score} 分, 你的眼睛等級跟 海豚 一樣喔！`)
-                    }
-                    else if (score === 5) {
+                    } else if (score === 5) {
                         alert(`你的分數是 ${score} 分, 你的眼睛等級跟 大象 一樣喔！`)
-                    }
-                    else if (score === 6) {
+                    } else if (score === 6) {
                         alert(`你的分數是 ${score} 分, 你的眼睛等級跟 無尾熊 一樣喔！`)
-                    }
-                    else if (score === 7) {
+                    } else if (score === 7) {
                         alert(`你的分數是 ${score} 分, 你的眼睛等級跟 貓頭鷹 一樣喔！`)
-                    }
-                    else if (score === 8) {
+                    } else if (score === 8) {
                         alert(`你的分數是 ${score} 分, 你的眼睛等級跟 兔子 一樣喔！`)
-                    }
-                    else if (score === 9) {
+                    } else if (score === 9) {
                         alert(`你的分數是 ${score} 分, 你的眼睛等級跟 貓 一樣喔！`)
-                    }
-                    else if (score === 10) {
+                    } else if (score === 10) {
                         alert(`你的分數是 ${score} 分, 你的眼睛等級跟 狗 一樣喔！`)
-                    }
-                    else if (score === 11) {
+                    } else if (score === 11) {
                         alert(`你的分數是 ${score} 分, 你的眼睛等級跟 馬 一樣喔！`)
-                    }
-                    else if (score === 12) {
+                    } else if (score === 12) {
                         alert(`你的分數是 ${score} 分, 你的眼睛等級跟 黑猩猩 一樣喔！`)
-                    }
-                    else if (score === 13) {
+                    } else if (score === 13) {
                         alert(`你的分數是 ${score} 分, 你的眼睛等級跟 豹 一樣喔！`)
-                    }
-                    else if (score === 14) {
+                    } else if (score === 14) {
                         alert(`你的分數是 ${score} 分, 你的眼睛等級跟 長頸鹿 一樣喔！`)
-                    }
-                    else if (score >= 15) {
+                    } else if (score >= 15) {
                         alert(`你的分數是 ${score} 分, 你的眼睛等級跟 老鷹 一樣喔！`)
                     }
 
-                    if(highscoreStorage === null || highscore.score < score) {        
+                    // alert(`你的分數是 ${score} 分, 你的眼睛等級跟 ${animal} 一樣喔！`)
 
-                    const name = prompt('恭喜您贏過所有挑戰者！趕快留下您的名字吧！')
-                    highscore.score = score
-                    highscore.name = name || 'passerby'
+                    if (highscoreStorage === null || highscore.score < score) {
 
-                    localStorage.setItem('highscore', JSON.stringify(highscore))
-                    textHighPlayer.innerText = highscore.name
-                    textHighScore.innerText = highscore.score
-        
-                    
-                    for( const hole of holes) {
-                        hole.style.backgroundColor = `rgb(255, 255, 255)`
+                        const name = prompt('恭喜您贏過所有挑戰者！趕快留下您的名字吧！')
+                        highscore.score = score
+                        highscore.name = name || 'passerby'
+
+                        localStorage.setItem('highscore', JSON.stringify(highscore))
+                        textHighPlayer.innerText = highscore.name
+                        textHighScore.innerText = highscore.score
+
+
+                        for (const hole of holes) {
+                            hole.style.backgroundColor = `rgb(255, 255, 255)`
+                        }
                     }
+                    score = 0
+                    gameTime = 20
                 }
-                score = 0
-                gameTime = 20
-                }
-            } ,1000)
-            
+            }, 1000)
             game()
-            
-
         }
 
         const game = () => {
-            
-            const randomR = Math.floor(Math.random()*255)
-            const randomG = Math.floor(Math.random()*255)
-            const randomB = Math.floor(Math.random()*255)
-            const random = Math.floor(Math.random()*100)
+            const randomR = Math.floor(Math.random() * 255)
+            const randomG = Math.floor(Math.random() * 255)
+            const randomB = Math.floor(Math.random() * 255)
+            const random = Math.floor(Math.random() * 100)
             // const a = `rgb(${randomR+30}, ${randomG+30}, ${randomB+30})` 
-            
-            for(const hole of holes) {                
-                hole.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`                    
-            }                
-                holes[random].style.backgroundColor = `rgb(${randomR + random}, ${randomG + random}, ${randomB + random})`            
-                
-                holes[random].onclick = () => {             
-                    score++
-                    textScore.innerText = score 
-                    
-                    game()            
-            }                                                              
-            } 
 
-        
+            for (const hole of holes) {
+                hole.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`
+            }
+            holes[random].style.backgroundColor =
+                `rgb(${randomR + random}, ${randomG + random}, ${randomB + random})`
+
+            holes[random].onclick = () => {
+                score++
+                textScore.innerText = score
+                holes[random].onclick = null
+
+                game()
+            }
+        }
     </script>
-    
+
 </body>
 </html>
